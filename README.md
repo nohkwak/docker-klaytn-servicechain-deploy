@@ -8,11 +8,18 @@ Followings are required.
 
 1. [Docker](https://docs.docker.com/get-docker/)
 2. [Docker-compose](https://docs.docker.com/compose/install/)
-3. [kscn, homi](https://ko.docs.klaytn.com/node/download)
+3. [homi](https://ko.docs.klaytn.com/node/download)
 
 
 ## homi 실행으로 설정 파일 생성
 ```
+$ tar xvf homi-vX.X.X-XXXXX-amd64.tar.gz
+homi-linux-amd64/
+homi-linux-amd64/bin/
+homi-linux-amd64/bin/homi
+
+$ cd homi-linux-amd64/bin
+
 $ ./homi setup local --cn-num 4 --test-num 1 --servicechain --p2p-port 22323 -o homi-output
 ```
 
@@ -42,6 +49,7 @@ homi-output/scripts/static-nodes.json 파일에서 각 노드 IP 및 Port 정보
 ### Docker 실행 및 확인
 ```
 $ docker-compose up
+
 $ docker ps
 CONTAINER ID        IMAGE                                      COMMAND                  CREATED             STATUS              PORTS                                                                                                                                                NAMES
 30b7500b8f20        klaytn/klaytn:latest                       "/bin/sh"                16 minutes ago      Up 16 minutes       0.0.0.0:22323->22323/tcp, 32323/tcp, 32323/udp, 0.0.0.0:8553->8551/tcp, 0.0.0.0:8558->8552/tcp, 0.0.0.0:50503->50506/tcp, 0.0.0.0:61003->61001/tcp   kscn4_SCN-3_1
