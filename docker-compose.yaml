@@ -4,7 +4,7 @@ services:
     hostname: SCN-0
     image: klaytn/klaytn:latest
     ports:
-      - '32320:32323'
+      - '32320:30000'
       - '8550:8551'
       - '61000:61001'
       - '50500:50506'
@@ -21,7 +21,7 @@ services:
     hostname: SCN-1
     image: klaytn/klaytn:latest
     ports:
-      - '32321:32323'
+      - '32321:30000'
       - '8551:8551'
       - '61001:61001'
       - '50501:50506'
@@ -38,7 +38,7 @@ services:
     hostname: SCN-2
     image: klaytn/klaytn:latest
     ports:
-      - '32322:32323'
+      - '32322:30000'
       - '8552:8551'
       - '61002:61001'
       - '50502:50506'
@@ -55,7 +55,7 @@ services:
     hostname: SCN-3
     image: klaytn/klaytn:latest
     ports:
-      - '32323:32323'
+      - '32323:30000'
       - '8553:8551'
       - '61003:61001'
       - '50503:50506'

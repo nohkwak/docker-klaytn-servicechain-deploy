@@ -17,6 +17,11 @@ $ sudo docker-compose up
 ### 확인 방법
 ```
 $ sudo docker ps
+CONTAINER ID        IMAGE                                      COMMAND                  CREATED             STATUS              PORTS                                                                                                                       NAMES
+433da604b56b        klaytn/klaytn:latest                       "/bin/sh"                22 seconds ago      Up 17 seconds       8552/tcp, 32323/udp, 0.0.0.0:8552->8551/tcp, 0.0.0.0:32322->32323/tcp, 0.0.0.0:50502->50506/tcp, 0.0.0.0:61002->61001/tcp   kscn4_SCN-2_1
+a50f5ae56d17        klaytn/klaytn:latest                       "/bin/sh"                22 seconds ago      Up 16 seconds       8552/tcp, 32323/udp, 0.0.0.0:8550->8551/tcp, 0.0.0.0:32320->32323/tcp, 0.0.0.0:50500->50506/tcp, 0.0.0.0:61000->61001/tcp   kscn4_SCN-0_1
+66b64edd71bb        klaytn/klaytn:latest                       "/bin/sh"                22 seconds ago      Up 16 seconds       0.0.0.0:8551->8551/tcp, 0.0.0.0:61001->61001/tcp, 8552/tcp, 32323/udp, 0.0.0.0:32321->32323/tcp, 0.0.0.0:50501->50506/tcp   kscn4_SCN-1_1
+28d5e6c3b54c        klaytn/klaytn:latest                       "/bin/sh"                22 seconds ago      Up 16 seconds       8552/tcp, 32323/udp, 0.0.0.0:32323->32323/tcp, 0.0.0.0:8553->8551/tcp, 0.0.0.0:50503->50506/tcp, 0.0.0.0:61003->61001/tcp   kscn4_SCN-3_1
 ```
 
 ### 접속 방법
@@ -42,10 +47,10 @@ keystore  klay      kscn
 ```
 
 ### 설정값 업데이트 
-kni 정보와 key 정보를 업데이트한다. 
+kni 정보와 key 정보 nodekey[1~4]를 각각 업데이트한다. 
 ```
 $ cp /klaytn/scripts/static-nodes.json /data/
-$ cp /klaytn/keys/nodekey2 /data/klay/nodekey
+$ cp /klaytn/keys/nodekey[1~4] /data/klay/nodekey
 ```
 
 kscn 설치 폴더(/klaytn-docker-pkg)로 이동하여 conf/kscnd.conf를 다음과 같이 업데이트한다. 
