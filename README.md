@@ -1,5 +1,5 @@
 # 4 SCN on Docker 
-[Klaytn Servicechain](https://ko.docs.klaytn.com/node/service-chain) 노드 4개를 Docker에 띄우기 위한 스크립트 및 설정 파일
+[Klaytn Service Chain](https://ko.docs.klaytn.com/node/service-chain) 노드 4개를 Docker에 띄우기 위한 스크립트 및 설정 파일
 
 
 
