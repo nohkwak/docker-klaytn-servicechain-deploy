@@ -2,7 +2,6 @@
 [Klaytn Service Chain](https://ko.docs.klaytn.com/node/service-chain) 노드 4개를 Docker에 띄우기 위한 스크립트 및 설정 파일
 
 
-
 ## Prerequisites
 Followings are required.
 
@@ -10,8 +9,6 @@ Followings are required.
 2. [Docker-compose](https://docs.docker.com/compose/install/)
 3. [homi](https://ko.docs.klaytn.com/node/download)
 
-
-![무제](https://user-images.githubusercontent.com/2010763/154245501-c30d87ce-ec8f-4ce4-b049-8388b7cd9430.png)
 
 ## homi 실행으로 설정 파일 생성
 ```
@@ -27,6 +24,7 @@ $ ./homi setup local --cn-num 4 --test-num 1 --servicechain --p2p-port 22323 -o 
 
 
 ## SCN 4개 노드 구성
+![무제](https://user-images.githubusercontent.com/2010763/154245501-c30d87ce-ec8f-4ce4-b049-8388b7cd9430.png)
 ### 작업 디렉토리 생성 및 파일 이동 
 ```
 $ mkdir ~/kscn4
