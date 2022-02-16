@@ -11,6 +11,8 @@ Followings are required.
 3. [homi](https://ko.docs.klaytn.com/node/download)
 
 
+![무제](https://user-images.githubusercontent.com/2010763/154245501-c30d87ce-ec8f-4ce4-b049-8388b7cd9430.png)
+
 ## homi 실행으로 설정 파일 생성
 ```
 $ tar xvf homi-vX.X.X-XXXXX-amd64.tar.gz
