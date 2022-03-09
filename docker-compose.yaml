@@ -1,32 +1,15 @@
 version: '3'
 services:
-  SCN-0:
-    hostname: SCN-0
-    image: klaytn/klaytn:latest
-    ports:
-      - '22320:22323'
-      - '8550:8551'
-      - '8555:8552'
-      - '61000:61001'
-      - '50500:50506'
-    entrypoint: /bin/sh
-    stdin_open: true # docker run -i
-    tty: true        # docker run -t
-    networks:
-      app_net:
-        ipv4_address: 172.16.239.10
-    volumes:
-      - ./homi-output:/klaytn
-    restart: "no"
-  SCN-1:
-    hostname: SCN-1
+  SCN-L2-01:
+    hostname: SCN-01
     image: klaytn/klaytn:latest
     ports:
       - '22321:22323'
       - '8551:8551'
-      - '8556:8552'
+      - '8555:8552'
       - '61001:61001'
-      - '50501:50506'
+      - '50501:50505'
+      - '50505:50506'
     entrypoint: /bin/sh
     stdin_open: true # docker run -i
     tty: true        # docker run -t
@@ -36,15 +19,16 @@ services:
     volumes:
       - ./homi-output:/klaytn
     restart: "no"
-  SCN-2:
-    hostname: SCN-2
+  SCN-L2-02:
+    hostname: SCN-02
     image: klaytn/klaytn:latest
     ports:
       - '22322:22323'
       - '8552:8551'
-      - '8557:8552'
+      - '8556:8552'
       - '61002:61001'
-      - '50502:50506'
+      - '50502:50505'
+      - '50506:50506'
     entrypoint: /bin/sh
     stdin_open: true # docker run -i
     tty: true        # docker run -t
@@ -54,21 +38,41 @@ services:
     volumes:
       - ./homi-output:/klaytn
     restart: "no"
-  SCN-3:
-    hostname: SCN-3
+  SCN-L2-03:
+    hostname: SCN-03
     image: klaytn/klaytn:latest
     ports:
       - '22323:22323'
       - '8553:8551'
-      - '8558:8552'
+      - '8557:8552'
       - '61003:61001'
-      - '50503:50506'
+      - '50503:50505'
+      - '50507:50506'
     entrypoint: /bin/sh
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     networks:
       app_net:
         ipv4_address: 172.16.239.13
+    volumes:
+      - ./homi-output:/klaytn
+    restart: "no"
+  SCN-L2-04:
+    hostname: SCN-04
+    image: klaytn/klaytn:latest
+    ports:
+      - '22324:22323'
+      - '8554:8551'
+      - '8558:8552'
+      - '61004:61001'
+      - '50504:50505'
+      - '50508:50506'
+    entrypoint: /bin/sh
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      app_net:
+        ipv4_address: 172.16.239.14
     volumes:
       - ./homi-output:/klaytn
     restart: "no"
