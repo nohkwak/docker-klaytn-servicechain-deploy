@@ -1,5 +1,6 @@
 # 4 SCN on Docker 
 [Klaytn Service Chain](https://ko.docs.klaytn.com/node/service-chain) 노드 4개를 Docker에 띄우기 위한 스크립트 및 설정 파일
+<img width="416" alt="스크린샷 2022-03-09 오후 9 30 37" src="https://user-images.githubusercontent.com/2010763/157442455-c0eefcba-05a7-4a3a-b37c-bf26238b5dfb.png">
 
 
 ## Prerequisites
@@ -24,7 +25,7 @@ $ ./homi setup local --cn-num 4 --test-num 1 --servicechain --chainID 1002 --ser
 
 
 ## SCN 4개 노드 구성
-![무제](https://user-images.githubusercontent.com/2010763/154245501-c30d87ce-ec8f-4ce4-b049-8388b7cd9430.png)
+
 ### 작업 디렉토리 생성 및 파일 이동 
 ```
 $ mkdir ~/kscn4
