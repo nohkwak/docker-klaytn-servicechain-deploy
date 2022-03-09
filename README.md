@@ -120,4 +120,4 @@ $ kscnd stop
 
 
 ### AMI 저장
-추후 반복잡업을 없애고자 여기까지 진행한 AMI([ami-05f533c07efc6c532](https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#ImageDetails:imageId=ami-05f533c07efc6c532))로 저장함 
+추후 반복잡업을 없애고자 여기까지 진행한 이미지([ami-05f533c07efc6c532](https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#ImageDetails:imageId=ami-05f533c07efc6c532))를 AWS에 저장하였다.  
