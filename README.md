@@ -19,7 +19,7 @@ homi-linux-amd64/bin/homi
 
 $ cd homi-linux-amd64/bin
 
-$ ./homi setup local --cn-num 4 --test-num 1 --servicechain --chainID 1002 --p2p-port 22323 -o homi-output
+$ ./homi setup local --cn-num 4 --test-num 1 --servicechain --chainID 1002 --serviceChainID 1012 --p2p-port 22323 -o homi-output
 ```
 
 
@@ -71,7 +71,7 @@ $ docker exec -it kscn4_SCN-L2-04_1 bash
 ### 초기화
 각각의 노드를 초기화 한다. genesis.json에서 test account의 잔고를 충분히 큰 값으로 변경해 놓으면 테스트 시 용이하다.  
 ```
-$ kscn   --datadir  /data   init  /klaytn/scripts/genesis.json
+$ kscn   --datadir  /data   init  /homi-output/scripts/genesis.json
 $ ls /data 
 keystore  klay      kscn
 ```
