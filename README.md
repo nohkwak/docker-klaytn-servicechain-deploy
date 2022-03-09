@@ -38,10 +38,10 @@ $ mv homi-output/         ./
 homi-output/scripts/static-nodes.json 파일에서 각 노드 IP 및 Port 정보를 업데이트한다. 
 ```
 [
-        "kni://...@172.16.239.10:22323?discport=0\u0026ntype=cn",
-        "kni://...@172.16.239.11:22323?discport=0\u0026ntype=cn",
-        "kni://...@172.16.239.12:22323?discport=0\u0026ntype=cn",
-        "kni://...@172.16.239.13:22323?discport=0\u0026ntype=cn"
+        "kni://...@172.16.239.11:22321?discport=0\u0026ntype=cn",
+        "kni://...@172.16.239.12:22322?discport=0\u0026ntype=cn",
+        "kni://...@172.16.239.13:22323?discport=0\u0026ntype=cn",
+        "kni://...@172.16.239.14:22324?discport=0\u0026ntype=cn"
 ]
 ```
 
@@ -51,25 +51,25 @@ homi-output/scripts/static-nodes.json 파일에서 각 노드 IP 및 Port 정보
 $ docker-compose up
 
 $ docker ps
-CONTAINER ID        IMAGE                                      COMMAND                  CREATED             STATUS              PORTS                                                                                                                                                NAMES
-30b7500b8f20        klaytn/klaytn:latest                       "/bin/sh"                16 minutes ago      Up 16 minutes       0.0.0.0:22323->22323/tcp, 32323/tcp, 32323/udp, 0.0.0.0:8553->8551/tcp, 0.0.0.0:8558->8552/tcp, 0.0.0.0:50503->50506/tcp, 0.0.0.0:61003->61001/tcp   kscn4_SCN-3_1
-214ef7a6c3a4        klaytn/klaytn:latest                       "/bin/sh"                16 minutes ago      Up 16 minutes       32323/tcp, 32323/udp, 0.0.0.0:8552->8551/tcp, 0.0.0.0:8557->8552/tcp, 0.0.0.0:22322->22323/tcp, 0.0.0.0:50502->50506/tcp, 0.0.0.0:61002->61001/tcp   kscn4_SCN-2_1
-c38630f7b0e0        klaytn/klaytn:latest                       "/bin/sh"                16 minutes ago      Up 16 minutes       32323/tcp, 32323/udp, 0.0.0.0:8550->8551/tcp, 0.0.0.0:8555->8552/tcp, 0.0.0.0:22320->22323/tcp, 0.0.0.0:50500->50506/tcp, 0.0.0.0:61000->61001/tcp   kscn4_SCN-0_1
-6563416ad2c5        klaytn/klaytn:latest                       "/bin/sh"                16 minutes ago      Up 16 minutes       0.0.0.0:8551->8551/tcp, 0.0.0.0:61001->61001/tcp, 32323/tcp, 32323/udp, 0.0.0.0:8556->8552/tcp, 0.0.0.0:22321->22323/tcp, 0.0.0.0:50501->50506/tcp   kscn4_SCN-1_1
+CONTAINER ID   IMAGE                  COMMAND     CREATED         STATUS         PORTS          NAMES
+001650532e00   klaytn/klaytn:latest   "/bin/sh"   6 minutes ago   Up 6 minutes   0.0.0.0:22323->22323/tcp, :::22323->22323/tcp, 32323/tcp, 32323/udp, 0.0.0.0:8553->8551/tcp, :::8553->8551/tcp, 0.0.0.0:8557->8552/tcp, :::8557->8552/tcp, 0.0.0.0:50503->50505/tcp, :::50503->50505/tcp, 0.0.0.0:50507->50506/tcp, :::50507->50506/tcp, 0.0.0.0:61003->61001/tcp, :::61003->61001/tcp   kscn4_SCN-L2-03_1
+a51f28cdebbb   klaytn/klaytn:latest   "/bin/sh"   6 minutes ago   Up 6 minutes   32323/tcp, 32323/udp, 0.0.0.0:8554->8551/tcp, :::8554->8551/tcp, 0.0.0.0:8558->8552/tcp, :::8558->8552/tcp, 0.0.0.0:22324->22323/tcp, :::22324->22323/tcp, 0.0.0.0:50504->50505/tcp, :::50504->50505/tcp, 0.0.0.0:50508->50506/tcp, :::50508->50506/tcp, 0.0.0.0:61004->61001/tcp, :::61004->61001/tcp   kscn4_SCN-L2-04_1
+552b205dd008   klaytn/klaytn:latest   "/bin/sh"   6 minutes ago   Up 6 minutes   0.0.0.0:8551->8551/tcp, :::8551->8551/tcp, 0.0.0.0:61001->61001/tcp, :::61001->61001/tcp, 32323/tcp, 32323/udp, 0.0.0.0:8555->8552/tcp, :::8555->8552/tcp, 0.0.0.0:22321->22323/tcp, :::22321->22323/tcp, 0.0.0.0:50501->50505/tcp, :::50501->50505/tcp, 0.0.0.0:50505->50506/tcp, :::50505->50506/tcp   kscn4_SCN-L2-01_1
+ac9d164cbb87   klaytn/klaytn:latest   "/bin/sh"   6 minutes ago   Up 6 minutes   32323/tcp, 32323/udp, 0.0.0.0:50506->50506/tcp, :::50506->50506/tcp, 0.0.0.0:8552->8551/tcp, :::8552->8551/tcp, 0.0.0.0:8556->8552/tcp, :::8556->8552/tcp, 0.0.0.0:22322->22323/tcp, :::22322->22323/tcp, 0.0.0.0:50502->50505/tcp, :::50502->50505/tcp, 0.0.0.0:61002->61001/tcp, :::61002->61001/tcp   kscn4_SCN-L2-02_1
 ```
 
 
 ### 접속 방법
 ```
-$ sudo docker exec -it kscn4_SCN-0_1 bash
-$ sudo docker exec -it kscn4_SCN-1_1 bash
-$ sudo docker exec -it kscn4_SCN-2_1 bash
-$ sudo docker exec -it kscn4_SCN-3_1 bash
+$ docker exec -it kscn4_SCN-L2-01_1 bash
+$ docker exec -it kscn4_SCN-L2-02_1 bash
+$ docker exec -it kscn4_SCN-L2-03_1 bash
+$ docker exec -it kscn4_SCN-L2-04_1 bash
 ```
 
 
 ### 초기화
-각각의 노드를 초기화 한다. 
+각각의 노드를 초기화 한다. genesis.json에서 test account의 잔고를 충분히 큰 값으로 변경해 놓으면 테스트 시 용이하다.  
 ```
 $ kscn   --datadir  /data   init  /klaytn/scripts/genesis.json
 $ ls /data 

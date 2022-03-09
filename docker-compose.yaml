@@ -17,7 +17,7 @@ services:
       app_net:
         ipv4_address: 172.16.239.11
     volumes:
-      - ./homi-output:/klaytn
+      - ./homi-output:/homi-output
     restart: "no"
   SCN-L2-02:
     hostname: SCN-02
@@ -36,7 +36,7 @@ services:
       app_net:
         ipv4_address: 172.16.239.12
     volumes:
-      - ./homi-output:/klaytn
+      - ./homi-output:/homi-output
     restart: "no"
   SCN-L2-03:
     hostname: SCN-03
@@ -55,7 +55,7 @@ services:
       app_net:
         ipv4_address: 172.16.239.13
     volumes:
-      - ./homi-output:/klaytn
+      - ./homi-output:/homi-output
     restart: "no"
   SCN-L2-04:
     hostname: SCN-04
@@ -74,7 +74,7 @@ services:
       app_net:
         ipv4_address: 172.16.239.14
     volumes:
-      - ./homi-output:/klaytn
+      - ./homi-output:/homi-output
     restart: "no"
 networks:
   app_net:
