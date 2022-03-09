@@ -80,8 +80,8 @@ keystore  klay      kscn
 ### 설정 파일 복사
 각각의 노드[1..4]에 static-nodes.json 파일과 nodekey[1..4]파일를 각각 복사한다. 
 ```
-$ cp /klaytn/scripts/static-nodes.json /data/
-$ cp /klaytn/keys/nodekey[1..4] /data/klay/nodekey
+$ cp /homi-output/scripts/static-nodes.json /data/
+$ cp /homi-output/keys/nodekey[1..4] /data/klay/nodekey
 ```
 
 /klaytn-docker-pkg/conf/kscnd.conf 파일에서 주요 정보를 업데이트한다. 
