@@ -19,7 +19,7 @@ homi-linux-amd64/bin/homi
 
 $ cd homi-linux-amd64/bin
 
-$ ./homi setup local --cn-num 4 --test-num 1 --servicechain --p2p-port 22323 -o homi-output
+$ ./homi setup local --cn-num 4 --test-num 1 --servicechain --chainID 1002 --p2p-port 22323 -o homi-output
 ```
 
 
